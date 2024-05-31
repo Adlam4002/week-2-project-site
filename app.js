@@ -58,9 +58,6 @@ pictures.forEach((picture) => {
   img.id = picture.id;
   img.tabIndex = 1;
   thumbNailContainer.appendChild(img);
-  //   addEventListener("click", () => {
-  //     mainImage.src = picture.src;
-  //   });
 });
 console.log(pictures);
 function myFunction() {
@@ -118,6 +115,36 @@ picture5.addEventListener("click", () => {
 picture5.addEventListener("keypress", () => {
   if (event.key === "Enter") {
     mainImage.src = picture5.src;
+  }
+});
+let but1 = document.querySelector("#but1");
+let but2 = document.querySelector("#but2");
+console.log(but1);
+console.log(but2);
+but2.addEventListener("click", () => {
+  if (mainImage.src == picture1.src) {
+    mainImage.src = picture2.src;
+  } else if (mainImage.src == picture2.src) {
+    mainImage.src = picture3.src;
+  } else if (mainImage.src == picture3.src) {
+    mainImage.src = picture4.src;
+  } else if (mainImage.src == picture4.src) {
+    mainImage.src = picture5.src;
+  } else if (mainImage.src == picture5.src) {
+    mainImage.src = picture1.src;
+  }
+});
+but1.addEventListener("click", () => {
+  if (mainImage.src == picture1.src) {
+    mainImage.src = picture5.src;
+  } else if (mainImage.src == picture2.src) {
+    mainImage.src = picture1.src;
+  } else if (mainImage.src == picture3.src) {
+    mainImage.src = picture2.src;
+  } else if (mainImage.src == picture4.src) {
+    mainImage.src = picture3.src;
+  } else if (mainImage.src == picture5.src) {
+    mainImage.src = picture4.src;
   }
 });
 // }))
