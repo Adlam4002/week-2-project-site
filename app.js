@@ -56,11 +56,13 @@ pictures.forEach((picture) => {
   img.src = picture.src;
   img.alt = picture.alt;
   img.id = picture.id;
+  img.tabIndex = 1;
   thumbNailContainer.appendChild(img);
-  addEventListener("click", () => {
-    mainImage.src = picture.src;
-  });
+  //   addEventListener("click", () => {
+  //     mainImage.src = picture.src;
+  //   });
 });
+console.log(pictures);
 function myFunction() {
   let img = document.createElement("img");
   img.src = pictures[0].src;
@@ -71,7 +73,52 @@ function myFunction() {
 myFunction();
 let mainImage = document.querySelector("#bpicture1");
 console.log(mainImage);
-// test.addEventListener("click" ( =>{
 
+let picture1 = document.querySelector("#picture1");
+let picture2 = document.querySelector("#picture2");
+let picture3 = document.querySelector("#picture3");
+let picture4 = document.querySelector("#picture4");
+let picture5 = document.querySelector("#picture5");
+console.log(picture2);
+picture1.addEventListener("click", () => {
+  mainImage.src = picture1.src;
+});
+picture1.addEventListener("keypress", () => {
+  if (event.key === "Enter") {
+    mainImage.src = picture1.src;
+  }
+});
+picture2.addEventListener("click", () => {
+  mainImage.src = picture2.src;
+});
+picture2.addEventListener("keypress", () => {
+  if (event.key === "Enter") {
+    mainImage.src = picture2.src;
+  }
+});
+picture3.addEventListener("click", () => {
+  mainImage.src = picture3.src;
+});
+picture3.addEventListener("keypress", () => {
+  if (event.key === "Enter") {
+    mainImage.src = picture3.src;
+  }
+});
+picture4.addEventListener("click", () => {
+  mainImage.src = picture4.src;
+});
+picture4.addEventListener("keypress", () => {
+  if (event.key === "Enter") {
+    mainImage.src = picture4.src;
+  }
+});
+picture5.addEventListener("click", () => {
+  mainImage.src = picture5.src;
+});
+picture5.addEventListener("keypress", () => {
+  if (event.key === "Enter") {
+    mainImage.src = picture5.src;
+  }
+});
 // }))
 // problem --> the images appear one after another (innerHTML ="")
