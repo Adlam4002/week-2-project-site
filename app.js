@@ -147,5 +147,35 @@ but1.addEventListener("click", () => {
     mainImage.src = picture4.src;
   }
 });
+document.addEventListener("keydown", () => {
+  if (event.key === "ArrowRight") {
+    if (mainImage.src == picture1.src) {
+      mainImage.src = picture2.src;
+    } else if (mainImage.src == picture2.src) {
+      mainImage.src = picture3.src;
+    } else if (mainImage.src == picture3.src) {
+      mainImage.src = picture4.src;
+    } else if (mainImage.src == picture4.src) {
+      mainImage.src = picture5.src;
+    } else if (mainImage.src == picture5.src) {
+      mainImage.src = picture1.src;
+    }
+  }
+});
+document.addEventListener("keydown", () => {
+  if (event.key === "ArrowLeft") {
+    if (mainImage.src == picture1.src) {
+      mainImage.src = picture5.src;
+    } else if (mainImage.src == picture2.src) {
+      mainImage.src = picture1.src;
+    } else if (mainImage.src == picture3.src) {
+      mainImage.src = picture2.src;
+    } else if (mainImage.src == picture4.src) {
+      mainImage.src = picture3.src;
+    } else if (mainImage.src == picture5.src) {
+      mainImage.src = picture4.src;
+    }
+  }
+});
 // }))
 // problem --> the images appear one after another (innerHTML ="")
