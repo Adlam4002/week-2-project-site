@@ -16,3 +16,7 @@ Building
 🎯 Display the larger image. Will you use an overlay of some kind, or a section on the same page? How would it work on smaller screens?
 
 🎯 Handle user interaction. Will you use event listeners on the thumbnails, or on the container? How will you know which thumbnail was selected?
+
+# Reflections
+
+I really struggled to try and automatically attach event listeners to the items within the array, so in the end I manually added even listers to the elements JS was creating. I then added tabindex into the forEach loop I made so that the thumbnails could be accessed without a mouse. Finally, I added another event listener that listened for the enter key being pressed while it was focused. Which would then change the main images source to match the focused thumbnail.
