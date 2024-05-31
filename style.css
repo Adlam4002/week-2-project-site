@@ -1,18 +1,25 @@
 * {
   background-color: cadetblue;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
 }
 .body-box {
+  z-index: 0;
   height: 100vh;
   width: 100vw;
   display: grid;
   grid-template-columns: 5vw 10vw 5vw 60vw 5vw 10vw 5vw;
   grid-template-rows: 5vh 10vh 70vh 5vh 10vh;
+  overflow-x: hidden;
 }
 #thumbnail-box {
   border: solid rgb(167, 196, 196);
   display: flex;
-  width: auto;
-  grid-area: 2/2/7/3;
+  height: auto;
+
+  grid-area: 2/2/3/7;
+  z-index: 1;
 }
 #picture1 {
   width: 18vw;
@@ -34,12 +41,18 @@
   width: 18vw;
   height: 10vh;
 }
+#bpicture1 {
+  width: 100vw;
+  height: 100vh;
+  grid-area: 1/1/8/6;
+}
 @media (min-width: 1000px) {
   .body-box {
+    z-index: 0;
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 45vw 1fr 1fr 1fr;
+    grid-template-columns: 9.16vw 9.16vw 9.16vw 45vw 9.16vw 9.16vw 9.16vw;
     grid-template-rows: 45vh 10vh 20vh 10vh 15vh;
   }
   #thumbnail-box {
@@ -48,6 +61,7 @@
     width: 45vw;
     height: 10vh;
     grid-area: 4/4/5/5;
+    z-index: 1;
   }
   #picture1 {
     width: 9vw;

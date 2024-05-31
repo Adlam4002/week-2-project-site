@@ -6,6 +6,7 @@ let pictures = [
     src: "https://images.unsplash.com/photo-1532884928231-ef40895eb654?q=80&w=2050&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "The sun shining through a thing clearing in a bamboo forest.",
     id: "picture1",
+    mainId: "bpicture1",
   },
   {
     src: "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -33,7 +34,7 @@ let pictures = [
 
 let thumbNailContainer = document.querySelector("#thumbnail-box");
 console.log(thumbNailContainer);
-let mainPicture = document.querySelector("#large-picture");
+let mainPicture = document.querySelector(".body-box");
 console.log(mainPicture);
 
 // # dom elements
@@ -45,16 +46,32 @@ console.log(mainPicture);
 // # assign a value to the img attributes
 // # (optional, assign a class name to the img element (.className property))
 // # append the new elements to the dom useing a document method (appendChild)
-// add an evenListener fro each img so i dont have to manually make one for each img
+// add an evenListener for each img so i dont have to manually make one for each img
 //pictures.addEventListerner("click", function(){})
 // function makeThumb(pictures)
 
+let test = "#";
 pictures.forEach((picture) => {
   let img = document.createElement("img");
   img.src = picture.src;
   img.alt = picture.alt;
   img.id = picture.id;
   thumbNailContainer.appendChild(img);
+  addEventListener("click", () => {
+    mainImage.src = picture.src;
+  });
 });
+function myFunction() {
+  let img = document.createElement("img");
+  img.src = pictures[0].src;
+  img.alt = pictures[0].alt;
+  img.id = pictures[0].mainId;
+  mainPicture.appendChild(img);
+}
+myFunction();
+let mainImage = document.querySelector("#bpicture1");
+console.log(mainImage);
+// test.addEventListener("click" ( =>{
 
+// }))
 // problem --> the images appear one after another (innerHTML ="")
