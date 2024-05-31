@@ -1,3 +1,72 @@
 * {
   background-color: cadetblue;
 }
+.body-box {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 5vw 10vw 5vw 60vw 5vw 10vw 5vw;
+  grid-template-rows: 5vh 10vh 70vh 5vh 10vh;
+}
+#thumbnail-box {
+  border: solid rgb(167, 196, 196);
+  display: flex;
+  width: auto;
+  grid-area: 2/2/7/3;
+}
+#picture1 {
+  width: 18vw;
+  height: 10vh;
+}
+#picture2 {
+  width: 18vw;
+  height: 10vh;
+}
+#picture3 {
+  width: 18vw;
+  height: 10vh;
+}
+#picture4 {
+  width: 18vw;
+  height: 10vh;
+}
+#picture5 {
+  width: 18vw;
+  height: 10vh;
+}
+@media (min-width: 1000px) {
+  .body-box {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 45vw 1fr 1fr 1fr;
+    grid-template-rows: 45vh 10vh 20vh 10vh 15vh;
+  }
+  #thumbnail-box {
+    border: solid rgb(167, 196, 196);
+    display: flex;
+    width: 45vw;
+    height: 10vh;
+    grid-area: 4/4/5/5;
+  }
+  #picture1 {
+    width: 9vw;
+    height: 10vh;
+  }
+  #picture2 {
+    width: 9vw;
+    height: 10vh;
+  }
+  #picture3 {
+    width: 9vw;
+    height: 10vh;
+  }
+  #picture4 {
+    width: 9vw;
+    height: 10vh;
+  }
+  #picture5 {
+    width: 9vw;
+    height: 10vh;
+  }
+}
