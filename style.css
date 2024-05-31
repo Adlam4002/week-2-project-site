@@ -17,7 +17,7 @@
   border: solid rgb(167, 196, 196);
   display: flex;
   height: auto;
-
+  border-radius: 10px;
   grid-area: 2/2/3/7;
   z-index: 1;
 }
