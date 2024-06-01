@@ -23,3 +23,18 @@ I have created an image gallery that can be navigated through by clicking on the
 
 I really struggled to try and automatically attach event listeners to the items within the array, so in the end I manually added even listers to the elements JS was creating. I then added tabindex into the forEach loop I made so that the thumbnails could be accessed without a mouse. Finally, I added another event listener that listened for the enter key being pressed while it was focused. Which would then change the main images source to match the focused thumbnail.
 By the look of my JS I have been inefficient and would like to look into ways to get the same results with fewer lines of code.
+
+After some testing I realise that instead of making individual eventListeners I could have added this to the for each loop I created for the array:
+
+img.addEventListener("click", () => {
+mainImage.src = picture.src;
+});
+img.addEventListener("keypress", () => {
+if (event.key === "Enter") {
+mainImage.src = picture.src;
+}
+});
+
+which makes them for me and would reduce the amount of code I needed to write. What I wrote was 30 lines of code and could be replaced by the 8 lines above with the same functionality. It's just more efficient.
+
+I would like to have the mainPicure's source be set to pictures[i].src and then have my buttons just increase the index number by one for forwards and down for backwards. The way I did it was if its [1] then make it [2] etc.
