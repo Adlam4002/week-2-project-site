@@ -57,6 +57,7 @@ pictures.forEach((picture) => {
   img.alt = picture.alt;
   img.id = picture.id;
   img.tabIndex = 1;
+  img.className = "thumb-nail";
   thumbNailContainer.appendChild(img);
 });
 console.log(pictures);

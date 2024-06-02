@@ -21,6 +21,14 @@
   grid-area: 2/2/3/7;
   z-index: 1;
 }
+.thumb-nail:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: none;
+}
+.thumb-nail {
+  transition: ease-out 0.2s;
+}
 #but2 {
   grid-area: 4/6/5/7;
   z-index: 1;
