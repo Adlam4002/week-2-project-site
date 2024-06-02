@@ -54,3 +54,5 @@ mainImage.src = pictures[i].src;
 I have tested this and it worked. This method is only 9 lines of code, the method I used at first was (lines 137 to 164) 27 lines. I could also change my arrowkeys to use the same thing so realisically i could have done the same thing with 18 lines rather than the 54 that I used. I could have been more efficient. I left the code as what I used initially as I did this extra work as a part of reflection on what I could have done better.
 
 Taking into account both the new methods I figured out and tested I could have used 26 lines to do what I did in 84 lines. I hope I'll be able to utilise this in my future work.
+
+I could have downloaded the images and manually changed their size so that the user is not forced to load the full sized image on the thumbnail.
