@@ -8,9 +8,11 @@ Styled appropriately with CSS, and make use of media queries.
 Use client-side JavaScript to display the larger image when a thumbnail is selected
 Use client-side JavaScript to navigate between images using the keyboard (tab, enter)
 Planning
+
 🎯 Plan out the UI and consider the elements you'll need to include to support the stories. Will thumbnails take up space at the top, side or bottom of the page? Will they float over the image?
 
 Building
+
 🎯 Display the thumbnail images. Will you use a grid, or a list? Will you use CSS Grid or Flexbox?
 
 🎯 Display the larger image. Will you use an overlay of some kind, or a section on the same page? How would it work on smaller screens?
@@ -51,7 +53,19 @@ i = (i + 1) % pictures.length;
 mainImage.src = pictures[i].src;
 });
 
-To make sure the images cycle in the correct order from any point I could also add their array index as a property within each object (position). Then within the for each loop, add to the eventListener function i= picture.pos, so that when the main img source is changed the i is set to that object's index. This would prevent cycling through array and clicking on the images from giving a conflicting order.
+To make sure the images cycle in the correct order from any point I could also add their array index as a property within each object (position). Then within the for each loop, add to the eventListener function i= picture.pos, so that when the main img source is changed the i is set to that object's index. This would prevent cycling through array and clicking on the images from giving a conflicting order. this could also be done with:
+
+pictures.forEach((picture, index) => {
+let img = document.createElement("img");
+img.src = picture.src;
+img.alt = picture.alt;
+img.id = picture.id;
+img.tabIndex = 1;
+img.addEventListener("click", () => {
+mainImage.src = picture.src;
+i = index;
+});
+
 I have tested this and it worked. This method is only 9 lines of code, the method I used at first was (lines 137 to 164) 27 lines. I could also change my arrowkeys to use the same thing so realisically i could have done the same thing with 18 lines rather than the 54 that I used. I could have been more efficient. I left the code as what I used initially as I did this extra work as a part of reflection on what I could have done better.
 
 Taking into account both the new methods I figured out and tested I could have used 26 lines to do what I did in 84 lines. I hope I'll be able to utilise this in my future work.
